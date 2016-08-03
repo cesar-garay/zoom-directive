@@ -31,8 +31,8 @@
     "tests"
   ],
   "dependencies": {
-    "ngSmoothScroll": "^2.0.0",
-    "angular-scroll": "^1.0.0"
+    "angular-material": "~1.0.7",
+    "angular-animate": "~1.5.3"
   },
   "devDependencies": {},
   "license": "MIT"
