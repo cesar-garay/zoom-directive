@@ -1,0 +1,57 @@
+body {
+  background-color: white; }
+
+.md-sidenav-left {
+  min-width: 280px;
+  background-color: #4caf50; }
+  .md-sidenav-left md-content {
+    background-color: #4caf50; }
+  .md-sidenav-left .header {
+    border-bottom: 1px solid white; }
+    .md-sidenav-left .header img {
+      width: 100%; }
+  .md-sidenav-left md-content {
+    overflow: hidden; }
+  .md-sidenav-left .menu-list .item {
+    border-bottom: 1px solid white; }
+    .md-sidenav-left .menu-list .item .md-button {
+      width: 100%;
+      color: white;
+      font-size: 16px;
+      text-align: left; }
+
+.container {
+  width: 100%; }
+
+.top-navbar {
+  background-color: #E8F5E9 !important;
+  position: fixed; }
+
+.sections {
+  padding: 16px;
+  margin-top: 50px;
+  height: calc(100vh - 60px);
+  overflow-x: auto; }
+  .sections md-card {
+    max-width: 864px; }
+    .sections md-card md-card-title {
+      display: block;
+      background-color: #4caf50;
+      color: white;
+      padding: 16px; }
+      .sections md-card md-card-title h3 {
+        margin: 0; }
+    .sections md-card md-card-content {
+      padding-top: 8px; }
+
+.code-example {
+  background-color: #2B1B1B;
+  padding: 8px; }
+  .code-example code {
+    color: white;
+    font-size: 16px;
+    line-height: 24px; }
+    .code-example code.lv1 {
+      margin-left: 8px; }
+    .code-example code.lv2 {
+      margin-left: 16px; }

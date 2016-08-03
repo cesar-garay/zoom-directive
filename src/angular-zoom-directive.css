@@ -1,0 +1,52 @@
+angular-zoom-directive {
+  position: relative; }
+  angular-zoom-directive .azd-zoomed-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1; }
+    angular-zoom-directive .azd-zoomed-container img {
+      position: absolute;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      pointer-events: none; }
+  angular-zoom-directive .azd-thumb-container {
+    display: block;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center; }
+    angular-zoom-directive .azd-thumb-container .overlay {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1002;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none; }
+    angular-zoom-directive .azd-thumb-container img {
+      width: 100%;
+      z-index: -1;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      pointer-events: none; }
+  angular-zoom-directive .azd-message {
+    position: absolute;
+    top: 0;
+    padding: 8px 0;
+    background-color: rgba(250, 250, 250, 0.3);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300; }
