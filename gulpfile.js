@@ -11,12 +11,9 @@ var rev = require('gulp-rev');
 var copy = require('gulp-copy');
 var clean = require('gulp-clean');
 
-gulp.task('build-page', ['clean-dist'], function() {
+gulp.task('build-page', ['clean-build','copy-build'], function() {
 
-    gulp.src('./demo/app/assets/*')
-        .pipe(copy('./build/app/assets'));
-
-    gulp.src('./demo/index.html')
+    return gulp.src('./demo/index.html')
     .pipe(usemin({
         css: [ rev() ],
         js: [ uglify(), rev() ],
@@ -26,9 +23,13 @@ gulp.task('build-page', ['clean-dist'], function() {
     .pipe(gulp.dest('build/'));
 
 });
+gulp.task('copy-build', function() {
+    gulp.src(['demo/app/assets/*'])
+        .pipe(gulp.dest('./build/app/assets'))
 
-gulp.task('clean-dist', function() {
-    return gulp.src('dist', {read: false})
+});
+gulp.task('clean-build', function() {
+    return gulp.src('build', {read: false})
        .pipe(clean());
 });
 
