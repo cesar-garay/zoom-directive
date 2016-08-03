@@ -24,7 +24,7 @@ gulp.task('build-page', ['clean-build','copy-build'], function() {
 
 });
 gulp.task('copy-build', function() {
-    gulp.src(['demo/app/assets/*'])
+    return gulp.src(['demo/app/assets/*'])
         .pipe(gulp.dest('./build/app/assets'))
 
 });
