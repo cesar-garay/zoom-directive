@@ -1,15 +1,16 @@
 {
   "name": "angular-zoom-directive",
   "version": "0.0.1",
-  "homepage": "https://github.com/cesar-garay/zoom-directive",
+  "homepage": "https://cesar-garay.github.io/zoom-directive/build/",
   "authors": [
     "Cesar Garay <cesar.a.garay@gmail.com>"
   ],
   "description": "Make zoom for two images",
-  "main": "dist/angular-zoom-directive.min.js",
+  "main": "src/angular-zoom-directive.js",
   "keywords": [
     "Angular",
-    "Angular Material",
+    "Angular",
+    "Material",
     "Zoom"
   ],
   "repository": {
@@ -31,8 +32,8 @@
   ],
   "dependencies": {
     "angular-material": "~1.0.7",
-    "angular-animate": "^1.5.8"
+    "angular-animate": "~1.5.3"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {},
+  "license": "MIT"
 }
