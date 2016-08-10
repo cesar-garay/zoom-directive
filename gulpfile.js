@@ -20,6 +20,7 @@ gulp.task('build-page', ['clean-dist'], function() {
     .pipe(usemin({
         css: [ rev() ],
         js: [ uglify(), rev() ],
+        min: [ uglify(), rev() ],
         inlinejs: [ uglify() ],
         inlinecss: [ minifyCss(), 'concat' ]
     }))
