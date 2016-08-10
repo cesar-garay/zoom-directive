@@ -17,6 +17,7 @@ gulp.task('build-page', ['clean-build','copy-build'], function() {
     .pipe(usemin({
         css: [ rev() ],
         js: [ uglify(), rev() ],
+        min: [ uglify(), rev() ],
         inlinejs: [ uglify() ],
         inlinecss: [ minifyCss(), 'concat' ]
     }))

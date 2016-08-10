@@ -8,16 +8,18 @@
     <link href="app/app_demo.css" rel="stylesheet">
     <link href="../src/angular-zoom-directive.css" rel="stylesheet">
     <!-- endbuild -->
-    <!-- build:js app.js -->
+
     <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
     <script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
     <script type="text/javascript" src="../bower_components/angular-messages/angular-messages.js"></script>
     <script type="text/javascript" src="../bower_components/angular-material/angular-material.js"></script>
-    <script type="text/javascript" src="../src/angular-zoom-directive.js"></script>
+
     <script type="text/javascript" src="./app/app_demo.js"></script>
     <!-- endbuild -->
-
+    <!-- build:min angular-zoom-directive.min.js -->
+    <script type="text/javascript" src="../src/angular-zoom-directive.js"></script>
+    <!-- build:js app.js -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body ng-app="zoomDemo" ng-controller="demoController as demoVm" layout="row">
@@ -69,6 +71,9 @@
                     <p>
                         The directive, detects if the device has "mousemove" event (for desktops) and if not, try to listen the angular-material drag event.
                     </p>
+                    <p>
+                        The zoomed image is loaded in an async way, that make a great performance when the page loads.
+                    </p>
                 </md-card-content>
             </md-card>
             <md-card id="usage">
@@ -79,13 +84,15 @@
                     <div class="example1">
                         <h3>Dynamic size</h3>
                         <angular-zoom-directive thumb="./app/assets/duck.jpg" zoom="./app/assets/duck-zoom.jpg" size=2>
-                            <label hide-gt-sm>Drag to zoom --></label>
+                            <div class="zoom-loading"><img style="width:50px;height:50px"src="./app/assets/loading.gif"></div>
+                            <label hide-gt-sm>Drag left ot right</label>
                             <label hide-sm hide-xs>Move mouse over image to zoom</md-icon></label>
+
                         </angular-zoom-directive>
                         <h3>Static size</h3>
                         <div style="width:220px">
                             <angular-zoom-directive thumb="./app/assets/duck.jpg" zoom="./app/assets/duck-zoom.jpg" size=3>
-                                <label hide-gt-sm>Drag to zoom --></label>
+                                <label hide-gt-sm>Drag left ot right</label>
                             </angular-zoom-directive>
                         </div>
                     </div>
