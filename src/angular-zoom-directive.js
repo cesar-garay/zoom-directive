@@ -39,14 +39,7 @@ function angularZoomDirective($mdGesture) {
         var zoomedMessage = angular.element(element[0].querySelector('.azd-message'));
         var loaded = false;
 
-        /*var imgZoom = new Image();
-        imgZoom.src = 'https://cesar-garay.github.io/zoom-directive/build/app/assets/duck-zoom.jpg';
-        imgZoom.onload = function() {
-        loaded = true;
-    };*/
-
     thumbContainer.append('<img class="thumb-image" draggable="false" src="' + attr.thumb + '"><div class="overlay"></div>');
-    //zoomedContainer.html('<img draggable="false" src="' + attr.zoom + '">');
 
     if (thumbContainer.find('label')) {
         thumbContainer.find('label').addClass('azd-message');
@@ -96,7 +89,6 @@ function angularZoomDirective($mdGesture) {
             zoomedContainer
             .css('height', thumbImage[0].offsetHeight + 'px')
             .css('width',thumbImage[0].offsetWidth + 'px')
-            //.css('display', 'block');
             .addClass('show');
 
             zoomedMessage
