@@ -52,12 +52,12 @@ function angularZoomDirective($mdGesture) {
 
     $mdGesture.register(element, 'drag');
     element
-    .on('$md.drag', onDrag)
-    .on('$md.dragstart', onDragStart)
-    .on('$md.dragend', onDragStop)
-    .on('mouseenter', onDragStart)
-    .on('mouseleave', onDragStop)
-    .on('mousemove', onDrag);
+    .on('$md.drag', moving)
+    .on('$md.dragstart', start)
+    .on('$md.dragend', stop)
+    .on('mouseenter', start)
+    .on('mouseleave', stop)
+    .on('mousemove', moving);
 
     function loadImage(ev) {
         var loading =angular.element(element[0].querySelector('.zoom-loading'));
@@ -69,10 +69,10 @@ function angularZoomDirective($mdGesture) {
             loading.css('z-index', '-1');
             zoomedContainer.html('<img class="zoomed-image" draggable="false" src="' + attr.zoom + '">');
             zoomedImage = zoomedContainer.find('img');
-            onDragStart(ev);
+            start(ev);
         };
     }
-    function onDragStop(ev) {
+    function stop(ev) {
         if (loaded) {
             zoomedContainer.removeClass('show');
             zoomedMessage.css('display', 'block');
@@ -82,7 +82,7 @@ function angularZoomDirective($mdGesture) {
         }
     }
 
-    function onDragStart(ev) {
+    function start(ev) {
         if (!loaded) {
             loadImage(ev);
         } else {
@@ -102,7 +102,7 @@ function angularZoomDirective($mdGesture) {
         }
         ev.stopPropagation();
     }
-    function onDrag(ev) {
+    function moving(ev) {
         if (loaded) {
             var x, y, clientWidth,clientHeight;
             if (ev.type === 'mousemove') {
