@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title></title>
-    <link rel="stylesheet" href="style-778caebf43.css"/>
+    <link rel="stylesheet" href="style-6ee8fb6b60.css"/>
 
     <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
@@ -11,131 +11,6 @@
     <script type="text/javascript" src="../bower_components/angular-messages/angular-messages.js"></script>
     <script type="text/javascript" src="../bower_components/angular-material/angular-material.js"></script>
 
-<<<<<<< HEAD
-        <md-content>
-            <div class="menu-list" layout="column">
-                <div class="item">
-                    <md-button ng-click="demoVm.goTo('description')">DESCRIPTION</md-button>
-                </div>
-                <div class="item">
-                    <md-button ng-click="demoVm.goTo('usage')">USAGE</md-button>
-                </div>
-                <div class="item">
-                    <md-button ng-click="demoVm.goTo('instalation')">INSTALATION</md-button>
-                </div>
-                <div class="item">
-                    <md-button ng-click="demoVm.goTo('code')">CODE</md-button>
-                </div>
-                <div class="item">
-                    <md-button href="#dependencies" >DEPENDENCIES</md-button>
-                </div>
-            </div>
-        </md-content>
-    </md-sidenav>
-    <div class="container" id="container" layout="column">
-        <md-toolbar class="top-navbar"  md-whiteframe="4">
-
-            <div class="md-toolbar-tools"layout="row">
-                <md-button hide-gt-sm ng-click="demoVm.openClose()"><i class="fa fa-bars" aria-hidden="true"></i></md-button>
-                <h2>
-                    <span>Zoom Directive library</span>
-                </h2>
-            </div>
-        </md-toolbar>
-
-        <div class="sections">
-            <md-card id="description">
-                <md-card-title>
-                    <h3>Description</h3>
-                </md-card-title>
-                <md-card-content>
-                    <p>
-                        The objective of this directive is add the possibility to zoom an image with a desktop until a movile device.
-                    </p>
-                    <p>
-                        The directive, detects if the device has "mousemove" event (for desktops) and if not, try to listen the angular-material drag event.
-                    </p>
-                </md-card-content>
-            </md-card>
-            <md-card id="usage">
-                <md-card-title>
-                    <h3>Usage</h3>
-                </md-card-title>
-                <md-card-content>
-                    <div class="example1">
-                        <h3>Dynamic size</h3>
-                        <angular-zoom-directive thumb="./app/assets/duck.jpg" zoom="./app/assets/duck-zoom.jpg" size=2>
-                            <label hide-gt-sm>Drag to zoom --></label>
-                            <label hide-sm hide-xs>Move mouse over image to zoom</md-icon></label>
-                        </angular-zoom-directive>
-                        <h3>Static size</h3>
-                        <div style="width:220px">
-                            <angular-zoom-directive thumb="./app/assets/duck.jpg" zoom="./app/assets/duck-zoom.jpg" size=3>
-                                <label hide-gt-sm>Drag to zoom --></label>
-                            </angular-zoom-directive>
-                        </div>
-                    </div>
-                </md-card-content>
-            </md-card>
-
-            <md-card id="instalation">
-                <md-card-title>
-                    <h3>Instalation</h3>
-                </md-card-title>
-                <md-card-content>
-                    <p>
-                        You can install via Bower components <br>
-                        <div class="code-example">
-                            <code> bower install --save angularZoomDirectiveCG</code>
-                        </div>
-                    </p>
-                    <p>
-                        Or You can dowload the
-                        <a href="https://github.com/cesar-garay/zoom-directive/blob/master/src/angular-zoom-directive.js" target="blank">js</a> and
-                        <a href="https://github.com/cesar-garay/zoom-directive/blob/master/src/angular-zoom-directive.css" target="blank">css</a> file and linked into your application <br>
-                        <div class="code-example" layout="column">
-                            <code>&#60;link href="angular-zoom-directive.css" rel="stylesheet"&#62;</code>
-                            <code>&#60;script type="text/javascript" src="angular-zoom-directive.js"&#62;&#60;/script&#62;</code>
-                        </div>
-                    </p>
-                    <p>
-                        After that, you only need to inject in your application <br>
-                        <div class="code-example">
-                            <code>'angular-zoom-directive'</code>
-                        </div>
-                    </p>
-                </md-card-content>
-            </md-card>
-
-            <md-card id="code">
-                <md-card-title>
-                    <h3>Code</h3>
-                </md-card-title>
-                <md-card-content>
-                    <div class="code-example" layout="column">
-                        <code class="lv1">&#60;angular-zoom-directive thumb="path-to-thumb-image" zoom="path-to-zoom-image" size="multiplied-size"&#62;</code>
-                        <code class="lv2">&#60;label&#62;Message to indicate how to zoom. Could be multiple&#60;/label&#62;</code>
-                        <code class="lv1">&#60;/angular-zoom-directive&#62;</code>
-                    </div>
-                </md-card-content>
-            </md-card>
-            <md-card id="dependencies">
-                <md-card-title>
-                    <h3>Dependencies</h3>
-                </md-card-title>
-                <md-card-content>
-                    <p>
-                        This directive depends on <a href="https://material.angularjs.org/latest/">Angular-Material</a> library.
-                    </p>
-                </md-card-content>
-            </md-card>
-        </div>
-    </div>
-
-</body>
-</html>
-=======
     <script type="text/javascript" src="./app/app_demo.js"></script>
     
     <script src="angular-zoom-directive-bbe0f0c504.min.js"></script>
->>>>>>> 79a4cf589a0232a10fc3ab22eebfb5b183ce1fda
