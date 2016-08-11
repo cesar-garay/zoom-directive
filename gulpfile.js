@@ -44,7 +44,7 @@ gulp.task('serve', function() {
         path: '/',
         directoryListing: false,
         fallback: './demo/index.html',
-        host: '10.1.11.58',
+        host: 'localhost',
         middleware: [
             getStatic({route: /^\/app/, handle: serveStatic('demo')})
         ]

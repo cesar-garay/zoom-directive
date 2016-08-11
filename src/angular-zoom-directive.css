@@ -8,7 +8,7 @@ angular-zoom-directive {
     z-index: 1;
     opacity: 0;
     visibility: hidden;
-    transition: all .5s;
+    transition: opacity .5s, visibility 0.5s;
     box-shadow: 0; }
     angular-zoom-directive .azd-zoomed-container.show {
       opacity: 1;
