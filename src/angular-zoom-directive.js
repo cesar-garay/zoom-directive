@@ -107,9 +107,13 @@ function angularZoomDirective($mdGesture) {
             var x, y, clientWidth,clientHeight;
             if (ev.type === 'mousemove') {
                 var rect = ev.target.getBoundingClientRect();
+
                 if (angular.isDefined(ev.layerX) && ev.layerX > 0 && ev.layerY > 0) {
                     x = ev.layerX;
                     y = ev.layerY;
+                } else if(ev.offsetX !== 0 && ev.offsetY !== 0) {
+                    x = ev.offsetX;
+                    y = ev.offsetY;
                 } else {
                     x = ev.x;
                     y = ev.y;
