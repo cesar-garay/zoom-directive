@@ -61,12 +61,12 @@ function angularZoomDirective($mdGesture) {
 
     function loadImage(ev) {
         var loading =angular.element(element[0].querySelector('.zoom-loading'));
-        loading.css('z-index', '1009');
+        loading.css('display', 'flex');
         var imgZoom = new Image();
         imgZoom.src = attr.zoom;
         imgZoom.onload = function() {
             loaded = true;
-            loading.css('z-index', '-1');
+            loading.css('display', 'none');
             zoomedContainer.html('<img class="zoomed-image" draggable="false" src="' + attr.zoom + '">');
             zoomedImage = zoomedContainer.find('img');
             start(ev);

@@ -56,8 +56,8 @@ angular-zoom-directive {
             background-color: rgba(grey, 0.2);
             top:0;
             left: 0;
-            z-index: -1;
-            display: flex;
+            z-index: 10005;
+            display: none;
             justify-content: center;
             align-items: center;
             user-select: none;
